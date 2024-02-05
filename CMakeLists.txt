@@ -19,8 +19,10 @@ add_subdirectory(thirdparty)
 
 # ---- Main project's files ----
 add_executable(${PROJECT_NAME} main.cpp
-    src/Shader.cpp
-    lib/Shader.h)
+        lib/Shader.h
+        src/Shader.cpp
+        lib/Voxel.h
+        src/Voxel.cpp)
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE GLFW_INCLUDE_NONE)
 target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRARY_SUFFIX="")
