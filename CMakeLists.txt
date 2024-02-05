@@ -18,10 +18,9 @@ include(global_settings)
 add_subdirectory(thirdparty)
 
 # ---- Main project's files ----
-add_subdirectory(lib)
-add_subdirectory(src)
-
-add_executable(${PROJECT_NAME} main.cpp ${SOURCE_FILES} ${HEADER_FILES})
+add_executable(${PROJECT_NAME} main.cpp
+    src/Shader.cpp
+    lib/Shader.h)
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE GLFW_INCLUDE_NONE)
 target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRARY_SUFFIX="")
